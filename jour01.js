@@ -50,3 +50,7 @@ console.log(template);
 console.log("-------");
 
 // Bonus
+
+console.log("Bonus:")
+console.log(`Substring de \"${basic}\" =`, basic.substring(5, 7)); // Substring
+console.log('Echappement de caractère = Aujourd\'hui on est le 07/12') // Echappement caractère
