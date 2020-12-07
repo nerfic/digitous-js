@@ -38,7 +38,7 @@ console.log("\x1b[33m%s\x1b[0m", "-------");
 // 07 - Split
 
 var word = "banana";
-var letters = word.split()
+var letters = word.split("")
 console.log("My tab =", letters);
 console.log("\x1b[33m%s\x1b[0m", "-------");
 
