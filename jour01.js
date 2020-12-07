@@ -53,4 +53,4 @@ console.log("-------");
 
 console.log("Bonus:")
 console.log(`Substring de \"${basic}\" =`, basic.substring(5, 7)); // Substring
-console.log('Echappement de caractère = Aujourd\'hui on est le 07/12') // Echappement caractère
+console.log('Echappement de caractère = Aujourd\'hui on est le 07/12, ma citation du jour est \"La vie est trop courte pour avoir peur\"') // Echappement caractère
