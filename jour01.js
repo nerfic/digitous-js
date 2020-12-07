@@ -37,8 +37,8 @@ console.log("-------");
 
 // 07 - Split
 
-var world = "banana";
-var letters = ['w', 'o', 'r', 'd'];
+var word = "banana";
+var letters = [`${word}`];
 console.log(letters);
 console.log("-------");
 
@@ -48,3 +48,5 @@ var age = "22";
 var template = `I'm ${age} years old`;
 console.log(template);
 console.log("-------");
+
+// Bonus
