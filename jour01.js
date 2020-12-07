@@ -54,3 +54,14 @@ console.log("\x1b[33m%s\x1b[0m", "-------");
 console.log("Bonus:")
 console.log(`Substring de \"${basic}\" =`, basic.substring(5, 7)); // Substring
 console.log('Echappement de caractère = Aujourd\'hui on est le 07/12, ma citation du jour est \"La vie est trop courte pour avoir peur\"') // Echappement caractère
+console.log("\x1b[33m%s\x1b[0m", "-------");
+
+// var str = "Bonjour"
+
+// console.log(str.replace("o", "a"));
+
+
+var str = "Bonjour";
+var newStr = str.replace(RegExp("o", "gi"), "a");
+console.log(str + " " + newStr);
+console.log(str.replace(/o/gi, 'a'))
