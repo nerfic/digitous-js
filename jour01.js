@@ -38,7 +38,7 @@ console.log("-------");
 // 07 - Split
 
 var word = "banana";
-var letters = [`${word}`];
+var letters = word.split()
 console.log(letters);
 console.log("-------");
 
