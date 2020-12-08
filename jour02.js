@@ -119,6 +119,7 @@ switch (month) {
 // octobre, novembre = automne
 
 console.log("\x1b[33m%s\x1b[0m", "-------");
+console.log("\x1b[32m%s\x1b[0m", "My function:");
 
 function ft_round(number) {
 
@@ -131,7 +132,22 @@ function ft_round(number) {
     }
     else if (tab[1] < 5)
         return tab[0];
-
+    else {
+        return number;
+    }
 }
 
-console.log(ft_round(4.8));
+console.log(ft_round(11.4));
+
+console.log("\x1b[33m%s\x1b[0m", "-------");
+console.log("\x1b[32m%s\x1b[0m", "Xavier function:");
+
+var roundedNumber = 14.55;
+var calcul = roundedNumber - Math.floor(roundedNumber); // .45
+
+if (calcul >= 0.5) {
+    console.log(Math.ceil(roundedNumber));
+}
+else if (calcul < 0.5) {
+    console.log(Math.floor(roundedNumber));
+}
