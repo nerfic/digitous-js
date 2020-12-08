@@ -75,3 +75,63 @@ if (password.length > 5 && score >= limit) {
 } else {
     console.log('Nothing is good')
 }
+console.log("\x1b[33m%s\x1b[0m", "-------");
+
+// Bonus
+
+var random = Math.floor(Math.random() * 6) + 1;
+if (random === 6) {
+    console.log('Yes I win!', random);
+} else {
+    console.log('So close...', random);
+}
+
+console.log("\x1b[33m%s\x1b[0m", "-------");
+
+var month = "Aout";
+
+switch (month) {
+    case 'Décembre':
+    case 'Janvier':
+    case 'Février':
+        console.log("C'est l'hiver");
+        break;
+    case 'Mars':
+    case 'Avril':
+    case 'Mai':
+    case 'Juin':
+        console.log("C'est le printemps");
+        break;
+    case 'Juillet':
+    case 'Aout':
+    case 'Septembre':
+        console.log("C'est l'été");
+        break;
+    case 'Octobre':
+    case 'Novembre':
+        console.log("C'est l'automne")
+    default:
+        console.log("Ce n'est pas un mois! (en français et avec une maj)")
+}
+// decembre, janvier, février = hiver
+// mars, avril, mai, juin = printemps
+// juillet, aout, septembre = été
+// octobre, novembre = automne
+
+console.log("\x1b[33m%s\x1b[0m", "-------");
+
+function ft_round(number) {
+
+    var numberToString = `${number}`;
+    var tab = numberToString.split('.')
+    var tabResult;
+
+    if (tab[1] >= 5) {
+        return tabResult = parseInt(tab[0]) + 1;
+    }
+    else if (tab[1] < 5)
+        return tab[0];
+
+}
+
+console.log(ft_round(4.8));
