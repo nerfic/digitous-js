@@ -127,12 +127,20 @@ var tab = [];
 for (var i = 1; i <= 20; i++) {
     tab.push(Math.floor(Math.random() * 100))
 }
+console.log("Mon tableau aléatoire:", tab)
 
-console.log(tab.length, "\n", tab)
 
-var maxvalue;
+function arrayMax(array) {
+    var arrayLen = array.length;
+    var max = null;
+    while (arrayLen != 0) {
+        if (array[arrayLen] > max) {
+            max = array[arrayLen];
+        }
+        arrayLen--;
+    }
 
-for (var j = 100; tab[j] >= 100; j--) {
-    maxvalue = tab[j];
-    console.log(maxvalue)
+    return max;
 }
+
+console.log(arrayMax(tab))
