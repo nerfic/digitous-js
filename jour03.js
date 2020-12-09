@@ -73,14 +73,15 @@ console.log("\x1b[33m%s\x1b[0m", "-------");
 var i = 0;
 
 while (i <= 100) {
-    if (i % 3 === 0) {
+
+    if (i % 3 === 0 && i % 5 === 0) {
+        console.log(i, "fizzbuzz");
+    }
+    else if (i % 3 === 0) {
         console.log(i, "fizz");
     }
     else if (i % 5 === 0) {
         console.log(i, "buzz");
-    }
-    else if (i % 3 && i % 5 === 0) {
-        console.log(i, "fizzbuzz");
     }
     else if (i % 7 === 0) {
 
@@ -123,5 +124,18 @@ function randomStudent(liste) {
 }
 
 console.log(randomStudent(studentListe))
-
 console.log("\x1b[33m%s\x1b[0m", "-------");
+
+// Bonus 4
+
+
+var tab = [];
+
+for (var i = 1; i <= 20; i++) {
+    tab.push(Math.floor(Math.random() * 100))
+}
+
+console.log(tab.length, tab)
+
+var maxvalue;
+
