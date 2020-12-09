@@ -47,26 +47,19 @@ console.log("\x1b[33m%s\x1b[0m", "-------");
 
 // 06 - Reverse
 
-// function reverse(string) {
+function reverse(str) {
 
-//     // var strSplit = string.split("");
-//     // var strReverse;
+    var reverseString = "";
+    var i = str.length - 1;
+    console.log(i)
+    while (i >= 0) {
+        reverseString = reverseString + str[i];
+        i--;
+    }
+    return reverseString;
+}
 
-//     // var strSplitReverse = strSplit.reverse(); // Reverse mon tableau
-//     // var strReverse = strSplitReverse.join();
-//     // console.log(strReverse)
-
-//     var stringSplit = string.split("");
-//     var stringSplitReverse = stringSplit.reverse();
-//     console.log(stringSplitReverse)
-//     var newStr = stringSplitReverse.toString();
-//     newStr.replace(",", "")
-
-//     console.log(newStr)
-
-// }
-
-// console.log(reverse("Hello Konexio !"));
+console.log(reverse("Hello Konexio !"))
 
 // Bonus 1
 
@@ -135,7 +128,11 @@ for (var i = 1; i <= 20; i++) {
     tab.push(Math.floor(Math.random() * 100))
 }
 
-console.log(tab.length, tab)
+console.log(tab.length, "\n", tab)
 
 var maxvalue;
 
+for (var j = 100; tab[j] >= 100; j--) {
+    maxvalue = tab[j];
+    console.log(maxvalue)
+}
