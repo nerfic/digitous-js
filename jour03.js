@@ -140,7 +140,7 @@ console.log("Mon tableau aléatoire:", tab)
 //         arrayLen--;
 //     }
 //     return max;
-// }
+// } => Ce code fonctione parfaitement, je l'ai fais en while en premier parce que je trouver ça plus clair
 
 function arrayMax(array) {
     var arrayLen = array.length;
