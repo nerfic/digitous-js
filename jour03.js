@@ -130,14 +130,25 @@ for (var i = 1; i <= 20; i++) {
 console.log("Mon tableau aléatoire:", tab)
 
 
+// function arrayMax(array) {
+//     var arrayLen = array.length;
+//     var max = null;
+//     while (arrayLen >= 0) {
+//         if (array[arrayLen] > max) {
+//             max = array[arrayLen];
+//         }
+//         arrayLen--;
+//     }
+//     return max;
+// }
+
 function arrayMax(array) {
     var arrayLen = array.length;
-    var max = null;
-    while (arrayLen >= 0) {
+
+    for (var max = null; arrayLen >= 0; arrayLen--) {
         if (array[arrayLen] > max) {
             max = array[arrayLen];
         }
-        arrayLen--;
     }
     return max;
 }
