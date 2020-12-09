@@ -68,25 +68,60 @@ console.log("\x1b[33m%s\x1b[0m", "-------");
 
 // console.log(reverse("Hello Konexio !"));
 
-// Bonus
+// Bonus 1
 
 var i = 0;
 
 while (i <= 100) {
     if (i % 3 === 0) {
-        console.log(i, "fizz")
+        console.log(i, "fizz");
     }
     else if (i % 5 === 0) {
-        console.log(i, "buzz")
+        console.log(i, "buzz");
     }
     else if (i % 3 && i % 5 === 0) {
-        console.log(i, "fizzbuzz")
+        console.log(i, "fizzbuzz");
     }
     else if (i % 7 === 0) {
 
     }
     else {
-        console.log(i)
+        console.log(i);
     }
     i++;
-}   
+}
+
+console.log("\x1b[33m%s\x1b[0m", "-------");
+
+// Bonus 2
+
+var total2 = 0;
+var limit2 = 10;
+var i = 0;
+
+while (total2 < limit2) {
+    total2++;
+}
+console.log(total2)
+console.log("\x1b[33m%s\x1b[0m", "-------");
+
+// Bonus 3
+
+const studentListe = ["Ahmed", "Atif", "Elisabeth", "Ewa", "Houra", "Allan"];
+// var randomStudent = Math.floor(Math.random() * student.length);
+// console.log(randomStudent, student[randomStudent])
+
+
+function randomStudent(liste) {
+
+    var randomStudents = Math.floor(Math.random() * liste.length);
+
+    while (liste[randomStudents] === "Allan") {
+        var randomStudents = Math.floor(Math.random() * liste.length);
+    }
+    console.log(liste[randomStudents])
+}
+
+console.log(randomStudent(studentListe))
+
+console.log("\x1b[33m%s\x1b[0m", "-------");
