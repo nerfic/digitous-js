@@ -133,14 +133,14 @@ console.log("Mon tableau aléatoire:", tab)
 function arrayMax(array) {
     var arrayLen = array.length;
     var max = null;
-    while (arrayLen != 0) {
+    while (arrayLen >= 0) {
         if (array[arrayLen] > max) {
             max = array[arrayLen];
         }
         arrayLen--;
     }
-
     return max;
 }
 
-console.log(arrayMax(tab))
+console.log("La valeur max de mon tableau est:", arrayMax(tab));
+console.log("La valeur max de mon tableau avec Math.max est:", Math.max(...tab));
