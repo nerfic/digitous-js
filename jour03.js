@@ -1,0 +1,92 @@
+// 01 - Array
+
+var fruits = ["mango", "lemon", "blueberry"];
+console.log(fruits);
+console.log("\x1b[33m%s\x1b[0m", "-------");
+
+// 02 - Access
+
+var ingredients = ["eggs", "milk", "butter"];
+console.log(ingredients.indexOf("butter"));
+console.log("\x1b[33m%s\x1b[0m", "-------");
+
+// 03 - Add and Remove
+
+var objects = ["pen", "book", "lamp"];
+console.log("Afficher objects", objects);
+objects.unshift("chair");
+console.log("Ajouter chair au début du tableau", objects);
+objects.pop("lamp");
+console.log("Supprimer lamp du tableau", objects);
+objects.push("laptop");
+console.log("Ajouter laptop a la fin du tableau", objects);
+objects.pop("chair");
+console.log("Supprimer chair du tableau", objects);
+console.log("\x1b[33m%s\x1b[0m", "-------");
+
+// 04 - Order
+
+var numbers = [4, 10, 8, 12, 6];
+console.log("Tableau à l'origine", numbers);
+console.log("Tableau à l'envers", numbers.reverse());
+console.log("Tableau ordre croissant", numbers.sort((a, b) => a - b));
+console.log("\x1b[33m%s\x1b[0m", "-------");
+
+
+// 05 - Boucle
+
+var total = 0;
+var limit = 10;
+
+for (var i = 0; i <= limit; i++) {
+    total = i;
+}
+
+console.log("Valeur de total now:", total);
+console.log("\x1b[33m%s\x1b[0m", "-------");
+
+// 06 - Reverse
+
+// function reverse(string) {
+
+//     // var strSplit = string.split("");
+//     // var strReverse;
+
+//     // var strSplitReverse = strSplit.reverse(); // Reverse mon tableau
+//     // var strReverse = strSplitReverse.join();
+//     // console.log(strReverse)
+
+//     var stringSplit = string.split("");
+//     var stringSplitReverse = stringSplit.reverse();
+//     console.log(stringSplitReverse)
+//     var newStr = stringSplitReverse.toString();
+//     newStr.replace(",", "")
+
+//     console.log(newStr)
+
+// }
+
+// console.log(reverse("Hello Konexio !"));
+
+// Bonus
+
+var i = 0;
+
+while (i <= 100) {
+    if (i % 3 === 0) {
+        console.log(i, "fizz")
+    }
+    else if (i % 5 === 0) {
+        console.log(i, "buzz")
+    }
+    else if (i % 3 && i % 5 === 0) {
+        console.log(i, "fizzbuzz")
+    }
+    else if (i % 7 === 0) {
+
+    }
+    else {
+        console.log(i)
+    }
+    i++;
+}   
