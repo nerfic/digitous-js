@@ -39,7 +39,7 @@ var total = 0;
 var limit = 10;
 
 for (var i = 0; i <= limit; i++) {
-    total = i;
+    total = total + i;
 }
 
 console.log("Valeur de total now:", total);
@@ -58,6 +58,13 @@ function reverse(str) {
     }
     return reverseString;
 }
+
+
+// var str = "Salut Discord";
+// var reverseString = "";
+// for (var i = str.length - 1; i >= 0; i--) {
+//     reverseString = reverseString + str[i];
+// }
 
 console.log(reverse("Hello Konexio !"))
 
@@ -108,10 +115,10 @@ const studentListe = ["Ahmed", "Atif", "Elisabeth", "Ewa", "Houra", "Allan"];
 
 function randomStudent(liste) {
 
-    var randomStudents = Math.floor(Math.random() * liste.length);
+    var randomStudents = Math.floor(Math.random() * liste.length - 1);
 
     while (liste[randomStudents] === "Allan") {
-        var randomStudents = Math.floor(Math.random() * liste.length);
+        var randomStudents = Math.floor(Math.random() * liste.length - 1);
     }
     console.log(liste[randomStudents])
 }
@@ -155,3 +162,7 @@ function arrayMax(array) {
 
 console.log("La valeur max de mon tableau est:", arrayMax(tab));
 console.log("La valeur max de mon tableau avec Math.max est:", Math.max(...tab));
+
+var blabla = "salut"
+
+console.log(blabla.length)
