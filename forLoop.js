@@ -1,9 +1,13 @@
 // 01 - Somme des carrés
-
+var somme = 0;
+var square = 0;
 for (var i = 5; i <= 10; i++) {
     console.log(`${i} x ${i} = ${i * i}`);
+    square = i * i;
+    somme = somme + square;
 }
 
+console.log(somme)
 console.log("\x1b[33m%s\x1b[0m", "-------");
 
 // 02 - Comptons
@@ -27,3 +31,19 @@ for (var i = 0; i <= 20; i++) {
         console.log(dice)
     }
 }
+
+console.log("\x1b[33m%s\x1b[0m", "-------");
+
+var tab = ["Mosindo", "Allan", "Seb", "Thi"]
+var dice = Math.floor(Math.random() * tab.length)
+var ancienResultat = dice;
+
+while (dice) {
+    if (dice == ancienResultat)
+        dice = Math.floor(Math.random() * tab.length)
+    ancienResultat = tab[dice]
+}
+
+console.log(tab[dice])
+
+console.log("\x1b[33m%s\x1b[0m", "-------");
