@@ -66,16 +66,16 @@ console.log("\x1b[33m%s\x1b[0m", "-------");
 var words = ["hello", "goodbye", "yes", "no", "stop", "go go go"];
 var count = 0;
 var words2 = 0;
+var letterToSearch = "o";
 
 for (var i = 0; i < words.length; i++) {
     words2 = words[i].split('');
 
     for (var j = 0; j < words2.length; j++) {
-        if (words2[j] === "o") {
+        if (words2[j] === letterToSearch) {
+            console.log(`J'ai trouvé un ${letterToSearch} :)`)
             count++;
         }
     }
 }
-
-console.log(words2)
-console.log("Mon compteur est à", count)
+console.log(`Le nombre total de ${letterToSearch} est ${count}`)
