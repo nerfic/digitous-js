@@ -31,19 +31,17 @@ console.log("\x1b[33m%s\x1b[0m", "--------------");
 
 // 03 - Even
 
-var paire = null;
-
 function checkIfEven(num) {
     if (num % 2 === 0) {
-        paire = true;
+        return true;
     }
     else {
-        paire = false;
+        return false;
     }
 }
 // je crée une boucle pour afficher le resultat de 0 à 10 parce que je suis feignant 
 for (var i = 0; i <= 10; i++) {
-    console.log(`${i} est un nombre ${checkIfEven(i)} paire = ${paire}`);
+    console.log(`${i} est un nombre paire? ${checkIfEven(i)}`);
 }
 
 console.log("\x1b[33m%s\x1b[0m", "--------------");
@@ -66,4 +64,33 @@ console.log("\x1b[33m%s\x1b[0m", "--------------");
 
 // 05 - Add Up
 
-// Pas compris la consigne
+function addUp(num) {
+
+    var ancienResult = 0;
+
+    for (var i = 0; i <= num; i++) {
+        ancienResult += i;
+    }
+    return ancienResult;
+}
+
+console.log(addUp(12))
+console.log("\x1b[33m%s\x1b[0m", "--------------");
+
+// 06 - Time
+
+function format(num) {
+
+    var hours = Math.floor(num / 3600);
+    var minutes = Math.floor((num - (hours * 3600)) / 60);
+    var seconds = num - (hours * 3600) - (minutes * 60);
+    var hhmmss = `${hours}:${minutes}:${seconds}`
+    return hhmmss;
+}
+
+console.log(format(3700))
+console.log("\x1b[33m%s\x1b[0m", "--------------");
+
+// Bonus 1
+
+console.log(9 % 5)
