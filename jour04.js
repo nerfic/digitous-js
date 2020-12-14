@@ -114,3 +114,30 @@ for (var j = 3; j <= 18; j++) {
     console.log(`Mot de passe de ${j} caractères: ${generatePassword(j)}`);
 }
 console.log("\x1b[33m%s\x1b[0m", "--------------");
+
+// Bonus 2 
+
+function launchDice(numberOfDice) {
+    var i = 0;
+    var dice = null;
+    var result = 0;
+
+    while (i < numberOfDice) {
+        dice = Math.floor(Math.random() * 6 + 1)
+        result = result + dice;
+        i++;
+    }
+    return result;
+}
+
+var numberOfDice = 10;
+var player1 = launchDice(numberOfDice);
+var player2 = launchDice(numberOfDice);
+
+if (player1 > player2) {
+    console.log(`Player 1 (${player1}) est supérieur à Player 2 (${player2})`)
+} else if (player2 > player1) {
+    console.log(`Player 2 (${player2}) est supérieur à Player 1 (${player1})`)
+} else {
+    console.log(`Egalité parfaite! player1 = ${player1}, player2 = ${player2}`)
+}
