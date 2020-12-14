@@ -32,7 +32,7 @@ while (ussainBolt < 100 && tysonGay < 100) {
     tysonGay = tysonGay + Math.floor(Math.random() * 10 + 1)
 
     if (ussainBolt >= 100 && tysonGay >= 100) {
-        console.log(`Les deux son vainqueurs!`)
+        console.log(`Les deux sont vainqueurs!`)
     } else if (ussainBolt >= 100) {
         console.log("Usain Bolt Vainqueur = ", ussainBolt)
     } else if (tysonGay >= 100) {

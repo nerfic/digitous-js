@@ -65,7 +65,7 @@ console.log("\x1b[33m%s\x1b[0m", "-------");
 
 var words = ["hello", "goodbye", "yes", "no", "stop", "go go go"];
 var count = 0;
-var words2 = 0;
+var words2 = null;
 var letterToSearch = "o";
 
 for (var i = 0; i < words.length; i++) {
