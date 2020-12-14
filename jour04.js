@@ -92,3 +92,25 @@ console.log(format(3700))
 console.log("\x1b[33m%s\x1b[0m", "--------------");
 
 // Bonus 1
+
+function generatePassword(num) {
+    var char = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    var result = "";
+    var i = 0;
+    var error = "Error";
+
+    while (i < num) {
+        result = result + char.charAt(Math.round(Math.random() * char.length))
+        i++
+    }
+    if (result.length < 6 || result.length > 15) {
+        return error;
+    } else {
+        return result;
+    }
+}
+
+for (var j = 3; j <= 18; j++) {
+    console.log(`Mot de passe de ${j} caractères: ${generatePassword(j)}`);
+}
+console.log("\x1b[33m%s\x1b[0m", "--------------");
