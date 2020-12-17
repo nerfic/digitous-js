@@ -1,14 +1,30 @@
 // 01 - Alphabet
 
+function compare(a, b) {
+    console.log(a, b)
+    console.log(a.charCodeAt(0))
+    console.log(b.charCodeAt(0))
+
+    if (a.toLowerCase().charCodeAt(0) > b.toLowerCase().charCodeAt(0)) {
+        return 1;
+    }
+    else if (a.toLowerCase().charCodeAt(0) < b.toLowerCase().charCodeAt(0)) {
+        return -1
+    } else {
+        return 0;
+    }
+}
+
+
 function sortLetters(string) {
 
     var stringToArray = string.split("");
-    var ArrayToAlpha = stringToArray.sort();
+    var ArrayToAlpha = stringToArray.sort(compare);
     var AlphaToString = ArrayToAlpha.join('')
     return AlphaToString
 
 }
-var string = "konexio"
+var string = "Konexio"
 
 console.log(sortLetters(string))
 console.log("\x1b[33m%s\x1b[0m", "--------------");
@@ -126,5 +142,5 @@ string = "Javascript is easy lol";
 console.log(makeItSpongeBob(string))
 
 
-// Bonus 2 => Pas fait
+// Bonus 2 => Finit
 // Bonus 3 => Finit
