@@ -88,9 +88,31 @@ function swap(string) {
         }
         i++;
     }
-    console.log(result)
+    return result
 }
 
-string = "Hello World"
+string = "Hello World";
+console.log(swap(string))
+console.log("\x1b[33m%s\x1b[0m", "--------------");
 
-swap(string)
+// Bonus 1
+
+function makeItSpongeBob(string) {
+
+    var i = 0;
+    result = "";
+
+    while (i < string.length) {
+
+        if (i % 2 !== 0) {
+            result += string[i].toLowerCase();
+        } else {
+            result += string[i].toUpperCase();
+        }
+        i++;
+    }
+    return result;
+}
+
+string = "Javascript is easy lol";
+console.log(makeItSpongeBob(string))
