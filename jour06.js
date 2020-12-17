@@ -35,6 +35,7 @@ function format(string) {
 }
 
 format("1998-12-28")
+console.log("\x1b[33m%s\x1b[0m", "--------------");
 
 
 // 02 - Age
@@ -43,11 +44,11 @@ function calculateAge(string) {
     date = new Date(string);
     var difference = Date.now() - date.getTime();
     var age = new Date(difference);
-    return Math.abs(age.getUTCFullYear() - 1970);
+    return (age.getUTCFullYear() - 1970);
 }
 
 console.log(calculateAge('1998-07-28'))
+console.log("\x1b[33m%s\x1b[0m", "--------------");
 
 
 // 03 - Validator
-
