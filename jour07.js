@@ -71,3 +71,26 @@ console.log("Racecar =", checkPal("racecar"))
 console.log("Laptop =", checkPal("laptop"))
 
 console.log("\x1b[33m%s\x1b[0m", "--------------");
+
+// 04 - Swap
+
+function swap(string) {
+
+    var i = 0;
+    var result = "";
+
+    while (i < string.length) {
+
+        if (string[i] === string[i].toUpperCase()) {
+            result += string[i].toLowerCase();
+        } else if (string[i] === string[i].toLowerCase()) {
+            result += string[i].toUpperCase();
+        }
+        i++;
+    }
+    console.log(result)
+}
+
+string = "Hello World"
+
+swap(string)
