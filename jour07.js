@@ -22,8 +22,9 @@ function countEach(string) {
     var countX = 0;
     var countO = 0;
     var i = 0;
+    var errorMsg = "Il n'y a pas autant de x que de o "
 
-    while (i <= string.length) {
+    while (i <= string.length - 1) {
 
         if (string[i] == "x") {
             countX++;
@@ -33,7 +34,10 @@ function countEach(string) {
         i++;
     }
 
-    if (countX === countO) {
+    if (countX === 0 && countO === 0) {
+        return errorMsg;
+    }
+    else if (countX === countO) {
         return true;
     } else {
         return false;
@@ -42,8 +46,12 @@ function countEach(string) {
 
 var testCountEach1 = "xxxoooox"
 var testCountEach2 = "xox"
+var testCountEach3 = "aaaa"
 console.log(countEach(testCountEach1))
+console.log("\x1b[33m%s\x1b[0m", "-------");
 console.log(countEach(testCountEach2))
+console.log("\x1b[33m%s\x1b[0m", "-------");
+console.log(countEach(testCountEach3))
 console.log("\x1b[33m%s\x1b[0m", "--------------");
 
 // 03 - Palindrome
@@ -95,7 +103,7 @@ string = "Hello World";
 console.log(swap(string))
 console.log("\x1b[33m%s\x1b[0m", "--------------");
 
-// Bonus 1
+// Bonus 1 => Finit
 
 function makeItSpongeBob(string) {
 
@@ -116,3 +124,7 @@ function makeItSpongeBob(string) {
 
 string = "Javascript is easy lol";
 console.log(makeItSpongeBob(string))
+
+
+// Bonus 2 => Pas fait
+// Bonus 3 => Finit
