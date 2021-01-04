@@ -1,4 +1,4 @@
-// 01 - File System PAS FINIT
+// 01 - File System
 
 // var fs = require('fs');
 
@@ -13,9 +13,9 @@ var double = array.map(function (element) {
     return element + element
 })
 
-console.log("Ex 1", double)
+console.log("Ex 2", double)
 
-// 03 - Map Names PAS FINIT
+// 03 - Map Names
 
 var longNames = [
     {
@@ -28,8 +28,22 @@ var longNames = [
     }
 ];
 
-var shortNames = longNames.map((function (acc, element) {
-    return acc.firstName + element.lastName
+var shortNames = longNames.map((function (element) {
+    return {
+        name: element.firstName + " " + element.lastName
+    }
 }))
 
-console.log("Ex 2", shortNames)
+console.log("Ex 3", shortNames)
+
+// 04 - Filter Numbers
+
+var array = [1, "toto", 34, "javascript", 8];
+
+var numbers = array.filter(function (element) {
+    if (typeof (element) == "number") {
+        return element
+    }
+})
+
+console.log("Ex 4", numbers)
