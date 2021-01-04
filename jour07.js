@@ -41,9 +41,59 @@ console.log("Ex 3", shortNames)
 var array = [1, "toto", 34, "javascript", 8];
 
 var numbers = array.filter(function (element) {
-    if (typeof (element) == "number") {
+    if (typeof (element) === "number") {
         return element
     }
 })
 
 console.log("Ex 4", numbers)
+
+// 05 - Filter Even
+
+var numbers = [1, 2, 3, 4, 5, 6, 7, 8]
+var even = numbers.filter(function (element) {
+    if (element % 2 === 0) {
+        return element
+    }
+})
+
+console.log("Ex 5", even)
+
+// 06 - Cakes
+
+var cakes = [
+    {
+        name: "cake",
+        flavor: "vanilla",
+        status: "available"
+    },
+    {
+        name: "brownie",
+        flavor: "chocolate",
+        status: "available"
+    },
+    {
+        name: "pie",
+        flavor: "strawberry",
+        status: "available"
+    },
+    {
+        name: "muffin",
+        flavor: "pistachio",
+        status: "available"
+    },
+    {
+        name: "donut",
+        flavor: "chocolate",
+        status: "available"
+    },
+];
+
+var soldOut = cakes.map(function (element) {
+    if (element.flavor === "chocolate") {
+        element.status = "Sold Out!"
+    }
+    return element
+})
+
+console.log(soldOut)
