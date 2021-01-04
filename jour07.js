@@ -89,11 +89,11 @@ var cakes = [
     },
 ];
 
-var soldOut = cakes.map(function (element) {
+var soldOut = cakes.filter(function (element) {
     if (element.flavor === "chocolate") {
         element.status = "Sold Out!"
+        return element
     }
-    return element
 })
 
-console.log(soldOut)
+console.log("Ex 06", soldOut)
