@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/nerfic/digitous-js#readme",
   "dependencies": {
-    "prompt": "^1.0.0"
+    "chucknorris-io": "^1.0.5",
+    "prompt": "^1.0.0",
+    "request": "^2.88.2"
   }
 }
