@@ -1,6 +1,6 @@
-// 01 - Countries
-
 var request = require("request");
+
+// 01 - Countries
 
 var countriesNames = [];
 
@@ -19,23 +19,24 @@ request.get("https://restcountries.eu/rest/v1/all", function (err, res, body) {
         result += `${countriesNames[j]}, `
         j++;
     }
-    console.log(result)
+    console.log("Ex 01", result)
 })
 
 // 02 - Chuck Norris
 
 request.get("https://api.chucknorris.io/jokes/random", function (err, res, body) {
     var json = JSON.parse(body);
-    console.log(json.value)
+    console.log("Ex 02", json.value)
 })
 
 // 03 - Pokemon
 
 function catchPokemon(id) {
-    request.get(`https://pokeapi.co/api/v2/pokedex/${id}`, function (err, res, body) {
+    request.get(`https://pokeapi.co/api/v2/pokemon/${id}`, function (err, res, body) {
+
         var json = JSON.parse(body)
-        console.log(json)
+        console.log("Ex 03", json.name, id)
     })
 }
 
-console.log(catchPokemon(1))
+catchPokemon(150)
