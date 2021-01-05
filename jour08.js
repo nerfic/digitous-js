@@ -24,9 +24,18 @@ request.get("https://restcountries.eu/rest/v1/all", function (err, res, body) {
 
 // 02 - Chuck Norris
 
-request.get("https://api.chucknorris.io/jokes/random"), function (err, res, body) {
-    console.log(err);
-    console.log(res);
+request.get("https://api.chucknorris.io/jokes/random", function (err, res, body) {
     var json = JSON.parse(body);
-    console.log(json)
+    console.log(json.value)
+})
+
+// 03 - Pokemon
+
+function catchPokemon(id) {
+    request.get(`https://pokeapi.co/api/v2/pokedex/${id}`, function (err, res, body) {
+        var json = JSON.parse(body)
+        console.log(json)
+    })
 }
+
+console.log(catchPokemon(1))
