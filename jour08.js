@@ -45,7 +45,7 @@ catchPokemon(150)
 
 function getMeteo(city, countryCode) {
 
-    if (process.argv.length === 3) {
+    if (process.argv.length != 4) {
         console.log("Tu dois passer une ville et un code pays en argument! Ex: Paris FR")
     } else {
         request.get(`https://api.weatherbit.io/v2.0/current?city=${city},${countryCode}&key=c4bdca8420a34c48b86b623542682c0a`, function (err, res, body) {
