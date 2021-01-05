@@ -16,10 +16,10 @@ request.get("https://restcountries.eu/rest/v1/all", function (err, res, body) {
         i++;
     }
     while (j < countriesNames.length) {
-        result += `${countriesNames[j]}, `
+        result += `${countriesNames[j]} - `
         j++;
     }
-    console.log("Ex 01", result)
+    console.log(result)
 })
 
 // 02 - Chuck Norris
@@ -40,3 +40,20 @@ function catchPokemon(id) {
 }
 
 catchPokemon(150)
+
+// My Bonus
+
+function getMeteo(city, countryCode) {
+
+    if (process.argv.length === 3) {
+        console.log("Tu dois passer une ville et un code pays en argument! Ex: Paris FR")
+    } else {
+        request.get(`https://api.weatherbit.io/v2.0/current?city=${city},${countryCode}&key=c4bdca8420a34c48b86b623542682c0a`, function (err, res, body) {
+
+            var json = JSON.parse(body);
+            console.log(`Il fait actuellement ${json.data[0].temp} degrès à ${city}, ${countryCode.toUpperCase()}`)
+        })
+    }
+}
+
+getMeteo(process.argv[2], process.argv[3])
